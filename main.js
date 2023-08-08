@@ -72,8 +72,7 @@ const createWindow = () => {
   });
 
   const { script1, script2 } = getScipts();
-
-  console.log(script1, script2);
+  
   /* 注册监听事件 */
   ipcMain.on('custom-event-player1', (event, board) => {
     const result = script1(board);

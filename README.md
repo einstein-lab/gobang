@@ -10,7 +10,11 @@ npm i
 ```sh
 cd client-dev && npm i
 ```
-启动调试
+启动调试需要先打包一个客户端程序
+```sh
+cd client-dev && npm run build
+```
+然后
 ```sh
 npm start
 ```

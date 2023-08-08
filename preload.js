@@ -8,8 +8,6 @@ const bridge = {
       // 监听主进程回复的事件
       ipcRenderer.once('custom-event-player1-reply', (_, arg) => {
         console.log(arg);
-        // const fn = eval(arg);
-        // const result = fn(board);
         res(arg);
       });
       ipcRenderer.send('custom-event-player1', board);
@@ -19,21 +17,10 @@ const bridge = {
     return new Promise((res) => {
       // 监听主进程回复的事件
       ipcRenderer.once('custom-event-player2-reply', (_, arg) => {
-        const fn = new Function(`return ${arg}`)();
-        console.log(fn);
-        const result = fn(board);
-        res(result);
-      });
-      ipcRenderer.send('custom-event-player2', board);
-    });
-  },
-  getPath: () => {
-    return new Promise((res) => {
-      // 监听主进程回复的事件
-      ipcRenderer.once('custom-event-get-path-reply', (_, arg) => {
+        console.log(arg);
         res(arg);
       });
-      ipcRenderer.send('custom-event-get-path');
+      ipcRenderer.send('custom-event-player2', board);
     });
   },
 };
