@@ -26,3 +26,10 @@ npm run build
 ```sh
 cd client-dev && npm run build
 ```
+
+# 算法脚本说明
+在player目录下会加载前两个js文件，并读取其中的run方法当作对战的脚本。
+打包之后player目录在resource目录下，直接替换player下的脚本即可。
+目前没有增加热更新功能，每次都需要重启exe程序重新加载脚本。
+run方法入参为当前对战的局势0表示空位，-1表示对方棋子的位置，1表示己方棋子所在位置。
+需要计算并返回[number,number]类型的数据表示下一次己方下棋的位置。
