@@ -1,0 +1,50 @@
+{
+  "name": "engine",
+  "version": "1.0.0",
+  "description": "wuziqiyouxi",
+  "main": "main.js",
+  "scripts": {
+    "start": "set NODE_ENV=development && electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "set NODE_ENV=production && electron-forge make",
+    "build": "set NODE_ENV=production && cd client-dev && npm run build && cd ../ && electron-forge make"
+  },
+  "author": "einstein",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.2.1",
+    "@electron-forge/maker-deb": "^6.2.1",
+    "@electron-forge/maker-rpm": "^6.2.1",
+    "@electron-forge/maker-squirrel": "^6.2.1",
+    "@electron-forge/maker-zip": "^6.2.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.2.1",
+    "electron": "^25.4.0",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "acorn": "^8.10.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "escodegen": "^2.1.0",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.9.0",
+    "typescript": "^5.1.6"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120,
+    "proseWrap": "never",
+    "endOfLine": "lf",
+    "tabWidth": 2,
+    "useTabs": false,
+    "trailingComma": "all",
+    "semi": true,
+    "bracketSpacing": true,
+    "quoteProps": "consistent",
+    "arrowParens": "always",
+    "jsxSingleQuote": false,
+    "jsxBracketSameLine": false,
+    "parser": "typescript"
+  }
+}
